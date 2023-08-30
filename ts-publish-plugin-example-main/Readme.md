@@ -6,12 +6,20 @@ This repository demonstrates a working FrayTools publish plugin, which exports a
 
 To activate this plugin in FrayTools, you must enable it in the Plugin Manager.
 
-## Basic Setup
+## Build Instructions
 
 * Install [Node.js v16.x or newer](https://nodejs.org/en/) (Latest LTS version is recommended, easiest installation method is to use [NVM](https://github.com/nvm-sh/nvm))
-* Run `npm install`
-* Run`npm run build`
+* Clone this github repo and navigate to directory
+* Install NPM dependencies by running `npm install`
+* Build project using `npm run build`
+* Copy plugin folder out of the `dist/` directory into your `[User]/FrayToolsData/plugins` folder
+* Activate the plugin in your FrayTools project using the Plugin Manager
 
-The build will output the plugin files into a `dist/[PluginName]` folder. You can copy this folder into your FrayTools plugins directory in order to test the plugin in action.
+## Development instructions
 
-Note that this project uses ES2015 JavaScript in order to demonstrate that TypeScript is not strictly required for plugin creation. Even React is technically not required either - vanilla JS can be used if you bootstrap your DOM following the concepts from the base plugin React classes in the `plugin-core` project. Essentially you just need to set up handlers on  `FrayToolsPluginCore`.
+Same steps as build instructions above, but after `npm install`:
+
+* Run `npm run dev` to build and watch for file changes
+* Generated plugin folder will automatically be copied to `[User]/FrayToolsData/plugins`
+* Activate the plugin in your FrayTools project using the Plugin Manager
+* Changes to the plugin source will automatically appear in FrayTools after reloading the plugin

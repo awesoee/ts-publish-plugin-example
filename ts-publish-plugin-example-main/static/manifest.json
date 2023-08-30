@@ -1,0 +1,7 @@
+{
+  "version": "0.1.0",
+  "type": "PublishPlugin",
+  "id": "my.example.publish.plugin",
+  "name": "My Example Publish Plugin",
+  "description": "Example of a publish plugin."
+}
